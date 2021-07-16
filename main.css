@@ -15,6 +15,9 @@
   /* border: 5px dashed red; */
   position: relative;
 }
+/* animation function can be used anywhere */
+/* animation function can be used anywhere */
+/* / */
 
 #product-overview h1 {
   color: white;
@@ -23,6 +26,29 @@
   bottom: 5%;
   left: 3%;
   font-size: 1.6rem;
+  animation-name: moveLeft;
+  animation-duration: 1s;
+
+}
+@keyframes moveLeft{
+  0%
+  {
+      opacity: 0;
+      transform: translateX(-0.2rem);
+      /* transform: translateX(-100px); */
+
+  }
+  80%
+  {
+      transform: translateX(0.2rem);
+      /* transform: translateX(20px); */
+
+  }
+  100%
+  {
+      opacity: 1;
+      transform: translate(0);
+  }
 }
 
 @media (min-width: 40rem) and (min-height: 40rem) {
@@ -33,6 +59,8 @@
 
   #product-overview h1 {
     font-size: 3rem;
+    animation-name: moveLeft;
+    animation-duration:1s;
   }
 }
 
@@ -40,13 +68,18 @@
   color: #2ddf5c;
   text-align: center;
 }
-
+.section-title:hover{
+  
+  transform:rotate(10deg);
+}
 .plan {
   background: #d5ffdc;
   text-align: center;
   padding: 1rem;
   margin: 0.5rem 0;
   width: 100%;
+  animation-name:moveLeft;
+
 }
 
 .plan--highlighted {
@@ -60,10 +93,27 @@
   padding: 0.5rem;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
+
+
 }
 
 .plan__title {
   color: #0e4f1f;
+}
+.plan__title:hover{
+  transform: scale(1.5);
+  
+
+}
+.plan__price:hover{
+  transform: scale(1.1);
+  
+ 
+
+}
+.plan__annotation:hover{
+  transform: scale(1.5);
+
 }
 
 .plan__price {
@@ -129,7 +179,9 @@
   margin: 0;
   padding: 0;
   text-align: center;
+  
 }
+
 
 .key-feature__image {
   background: #ffcede;
@@ -140,14 +192,20 @@
   margin: auto;
   padding: 1.5rem;
 }
-
+.key-feature__image:hover{
+  animation: push-up;
+  animation-duration: 1s;
+}
 .key-feature__description {
   text-align: center;
   font-weight: bold;
   color: white;
   font-size: 1.2rem;
 }
-
+.key-feature__description:hover{
+  transform:rotateY(-20deg);
+  transform: scale(1.2);
+}
 @media (min-width: 40rem) {
   .key-feature {
     width: 30%;
@@ -213,4 +271,18 @@
 .modal__action--negative:active {
   background: #ff5454;
   border-color: #ff5454;
+}
+
+@keyframes push-up {
+  0% {
+      transform: translateY(0);
+  }
+
+  33% {
+      transform: translateY(-1.5rem);
+  }
+  
+  100% {
+      transform: translateY(-1rem);
+  }
 }

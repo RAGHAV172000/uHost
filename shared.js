@@ -5,6 +5,7 @@ var selectPlanButtons = document.querySelectorAll(".plan button");
 var toggleButton = document.querySelector(".toggle-button");
 var mobileNav = document.querySelector(".mobile-nav");
 var ctaButton = document.querySelector(".main-nav__item--cta");
+var form=document.querySelector(".feedback-form");
 
 // console.dir(backdrop.style['background-image']);
 

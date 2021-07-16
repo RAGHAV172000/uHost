@@ -281,3 +281,7 @@ main {
     transform: rotateZ(10deg);
   }
 }
+.main-footer__link:hover{
+transform:translateY(-10px);
+  
+}
